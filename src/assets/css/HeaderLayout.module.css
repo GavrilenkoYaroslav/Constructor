@@ -1,0 +1,53 @@
+.header {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+}
+
+.logo img{
+    width: 200px;
+    margin-left: 20px;
+    fill: black;
+}
+
+.menuContainer {
+    width: 35%;
+}
+
+.menuContainer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin: 0;
+}
+
+.menuContainer ul li {
+    position: relative;
+    list-style: none;
+    text-transform: uppercase;
+    color: slategrey;
+    transition: 0.2s;
+}
+
+.menuContainer ul li:hover {
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+
+.currentUser {
+    margin-right: 30px;
+}
+
+.currentUser img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50px;
+    margin-right: 15px;
+}

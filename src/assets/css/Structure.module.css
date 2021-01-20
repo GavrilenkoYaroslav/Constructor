@@ -1,0 +1,67 @@
+.title {
+    font-size: 26px;
+    color: slategrey;
+    text-align: left;
+}
+
+.itemsWrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    width: max-content;
+}
+
+.item {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+
+.item:hover, .active {
+    cursor: pointer;
+    background-color: deepskyblue;
+    color: white;
+}
+
+.commonTitle span,
+.commonItem span {
+    font-size: 26px;
+    color: slategrey;
+    text-align: left;
+}
+
+.commonTitle p,
+.commonItem p {
+    font-size: 14px;
+    color: slategrey;
+    text-align: left;
+}
+.commonItem {
+    padding: 2px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.commonItem:hover, .commonActive {
+    cursor: pointer;
+    background-color: deepskyblue;
+}
+
+.commonItem:hover span,
+.commonItem:hover p,
+.commonActive span,
+.commonActive p {
+    color: white;
+}
+
+.commonItem,
+.commonTitle {
+    margin-bottom: 20px;
+}

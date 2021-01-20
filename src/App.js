@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import {HomePage} from "./pages/HomePage";
+import {withSuspense} from "./assets/hoc/withSuspense";
+import {HeaderLayout} from "./components/HeaderLayout";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+const StartPage = React.lazy(() => import('./pages/StartPage'));
+const PostsPage = React.lazy(() => import('./pages/PostsPage'));
 
-export default App;
+const SuspendedStartPage = withSuspense(StartPage);
+const SuspendedPostsPage = withSuspense(PostsPage);
+
+export const App = () => {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path='/' render={() => <HomePage/>}/>
+
+                <Route exact path='/start' render={() =>
+                    <HeaderLayout>
+                        <SuspendedStartPage/>
+                    </HeaderLayout>
+                }/>
+
+                <Route path='/posts/:id?' render={() =>
+                    <HeaderLayout>
+                        <SuspendedPostsPage/>
+                    </HeaderLayout>
+                }/>
+
+                <Route exact path='/404' render={withSuspense(NotFound)}/>
+
+                <Route path={'*'} render={() => <Redirect to='/404'/>}/>
+            </Switch>
+        </BrowserRouter>
+    );
+};

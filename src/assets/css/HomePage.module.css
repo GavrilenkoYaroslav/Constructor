@@ -1,0 +1,73 @@
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 30%;
+    margin: 10px;
+}
+
+.greetingsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    width: 45%;
+    font-size: 44px;
+    line-height: 48px;
+    text-align: center;
+    color: slategrey;
+}
+
+.subTitle {
+    width: 30%;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    margin: 30px 0;
+    color: slategrey;
+}
+
+.startButton, .startButton:focus {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 3rem;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.startButton:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+
+.startButton span {
+    margin-right: 15px;
+    font-size: 24px;
+    position: relative;
+    top: 2px;
+}
+
+.startButton span svg {
+    fill: orange;
+}
+
+.greetingsBox p {
+    margin: 10px 0 0;
+    color: #ccc;
+}
+
+.bigImage {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    margin: 0 40px;
+    width: 33%;
+}

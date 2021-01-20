@@ -1,0 +1,17 @@
+.submit, .submit:focus {
+    padding: 0.5rem 1rem;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: deepskyblue;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.submit:hover {
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
